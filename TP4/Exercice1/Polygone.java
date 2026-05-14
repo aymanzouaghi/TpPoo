@@ -1,4 +1,4 @@
-package TP4 ;
+package TP4.Exercice1 ;
 import java.util.ArrayList;
 
 public abstract class Polygone extends FormeGeometrique implements Translatable {

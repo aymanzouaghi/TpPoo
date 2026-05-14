@@ -1,4 +1,4 @@
-package TP4;
+package TP4.Exercice1;
 
 public class Point implements Translatable {
     protected double x , y ;

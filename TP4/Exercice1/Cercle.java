@@ -1,4 +1,5 @@
-package TP4;
+package TP4.Exercice1;
+
 public class Cercle extends FormeGeometrique implements Translatable {
     protected double rayon ;
     protected Point centre ;

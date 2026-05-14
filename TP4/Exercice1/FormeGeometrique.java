@@ -1,4 +1,4 @@
-package TP4;
+package TP4.Exercice1;
 
 public abstract class FormeGeometrique {
     protected String nom ;

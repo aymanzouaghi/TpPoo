@@ -1,4 +1,4 @@
-package TP4;
+package TP4.Exercice2;
 import java.util.Comparator;
 public class ComparateurPIB implements Comparator<Region> {
     public ComparateurPIB (){}

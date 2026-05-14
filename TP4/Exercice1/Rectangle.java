@@ -1,4 +1,5 @@
-package TP4;
+package TP4.Exercice1;
+
 public class Rectangle extends Polygone {
     
     public Rectangle(Point p1, Point p2, Point p3, Point p4) {

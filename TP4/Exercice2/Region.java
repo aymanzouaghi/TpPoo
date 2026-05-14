@@ -1,4 +1,4 @@
-package TP4;
+package TP4.Exercice2;
 import java.lang.Comparable;
 public class Region implements Comparable<Region> {
     private String nom ; 
