@@ -2,6 +2,9 @@ package TP5;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class Calculatrice {
     /*Créer une classe Calculatrice avec une méthode saisieNombre() qui demande à l’utilisateur
@@ -31,21 +34,31 @@ public String saisieOperation() throws OperationException {
     }
     throw new OperationException();
 }
-public double lancementCalcul() {
+public double lancementCalcul() throws IOException {
     double nombre1 = saisieNombre();
     try {
         String operation = saisieOperation();
         double nombre2 = saisieNombre();
+        double resultat = 0;
         
         switch (operation) {
-            case "+" : return nombre1 + nombre2;
-            case "-" : return nombre1 - nombre2;
-            case "*" : return nombre1 * nombre2;
-            case "/" : return nombre1 / nombre2;
+            case "+" : resultat = nombre1 + nombre2; break;
+            case "-" : resultat = nombre1 - nombre2; break;
+            case "*" : resultat = nombre1 * nombre2; break;
+            case "/" : resultat = nombre1 / nombre2; break;
         }
+        sauvegarde(nombre1, operation, nombre2, resultat);
+        return resultat;
+        
     } catch (OperationException e) {
         System.out.println(e.getMessage());
     }
     return 0;
-}}
+}
+public void sauvegarde(double nombre1, String operation, double nombre2, double resultat) throws IOException {
+    FileWriter w = new FileWriter("log.txt", true);
+    w.write(LocalDateTime.now() + " : " + nombre1 + " " + operation + " " + nombre2 + " = " + resultat + "\n");
+    w.close();
+}
+}
 
