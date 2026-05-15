@@ -7,12 +7,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class Calculatrice {
-    /*Créer une classe Calculatrice avec une méthode saisieNombre() qui demande à l’utilisateur
-de saisir un nombre de type double et renvoie ce nombre. Inspirez vous pour cela de l’annexe
-du tp 5. Attention, la méthode close() appelé sur un objet de type Scanner ferme le flux
-d’entrée system.in, ce qui rendra impossible la saisie de nouvelles données par la suite. Il
-est préférable pour ce TP de créer un seul objet Scanner qu’on fermera seulement à la fin de
-l’application. Une deuxième option est de ne pas faire appel à cette méthode close(). */
 Scanner sc = new Scanner(System.in);
 public double saisieNombre (){
     System.out.println("Entrez un nombre reel : ");
