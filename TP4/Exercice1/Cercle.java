@@ -5,6 +5,7 @@ public class Cercle extends FormeGeometrique implements Translatable {
     protected Point centre ;
     public Cercle (double rayon , double x , double y){
         super("Cercle");
+        this.rayon = rayon ; 
         this.centre = new Point(x, y);
     }
     @Override

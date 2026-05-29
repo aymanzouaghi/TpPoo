@@ -29,9 +29,10 @@ public String saisieOperation() throws OperationException {
     throw new OperationException();
 }
 public double lancementCalcul() throws IOException {
-    double nombre1 = saisieNombre();
+    
     try {
         String operation = saisieOperation();
+        double nombre1 = saisieNombre();
         double nombre2 = saisieNombre();
         double resultat = 0;
         
